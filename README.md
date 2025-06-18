@@ -102,7 +102,7 @@ A simple Flask app (app.py) is also provided to make predictions on custom input
 🧑‍🔬 Author
 Purnapriya Tammana
 Data Science Intern | NLP Enthusiast
-🔗 LinkedIn:https://www.linkedin.com/in/purnapriya-tammana
+🔗 LinkedIn:https:https://www.linkedin.com/in/purnapriya-tammana-27a0a7346
 🔗 GitHub:https://github.com/purnapriya4448/codec_projects
 
 
@@ -113,3 +113,113 @@ This project is open-source and available under the MIT License.
 Dataset: Kaggle – Fake and Real News Dataset
 
 Libraries: Scikit-learn, TensorFlow, HuggingFace Transformers, NLTK, Flask
+# project 2: Customer Churn Prediction using Machine Learning
+
+## Overview
+
+Customer churn is when a customer stops using a company's products or services. Predicting churn helps businesses proactively retain customers and reduce revenue loss. This project aims to predict whether a customer will churn based on historical usage patterns and demographics using supervised machine learning techniques.
+
+## Goals
+
+- Analyze customer behavior
+- Identify key churn indicators
+- Build a predictive model with high accuracy
+- Deploy the model for real-time predictions (optional)
+
+---
+
+## Dataset
+
+We use a telecom dataset containing customer information, services used, and whether they have churned.
+
+### Key Features:
+- `gender`, `SeniorCitizen`, `Partner`, `Dependents`
+- `tenure`, `MonthlyCharges`, `TotalCharges`
+- `Contract`, `PaymentMethod`, `InternetService`, etc.
+- `Churn` (Target variable: Yes = 1, No = 0)
+
+---
+
+## Project Structure
+📁 customer-churn-prediction/
+│
+├── data/
+│ └── churn_data.csv
+│
+├── notebooks/
+│ ├── EDA_and_Cleaning.ipynb
+│ ├── Churn_Model_Training.ipynb
+│ └── Churn_Model_Evaluation.ipynb
+│
+├── models/
+│ └── churn_model.pkl
+│
+├── requirements.txt
+├── README.md
+└── app.py # Flask app (optional)
+
+
+
+## Workflow
+
+1. **Data Preprocessing**
+   - Handle missing values
+   - Encode categorical features (Label Encoding / One-Hot Encoding)
+   - Scale numerical features
+
+2. **Exploratory Data Analysis (EDA)**
+   - Correlation matrix
+   - Churn vs. categorical and numerical features
+
+3. **Modeling**
+   - Logistic Regression
+   - Random Forest
+   - XGBoost
+   - Evaluate using Accuracy, Precision, Recall, F1-score, ROC AUC
+
+4. **Hyperparameter Tuning**
+   - GridSearchCV / RandomizedSearchCV
+
+5. **Model Deployment (Optional)**
+   - Flask app to predict churn on new customer data
+
+---
+
+## Results
+
+| Model             | Accuracy | ROC AUC |
+|------------------|----------|---------|
+| Logistic Regression | 80%     | 0.85    |
+| Random Forest        | 85%     | 0.88    |
+| XGBoost              | 87%     | 0.90    |
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/your-username/customer-churn-prediction.git
+cd customer-churn-prediction
+pip install -r requirements.txt
+Run the notebook:
+
+jupyter notebook notebooks/Churn_Model_Training.ipynb
+Web App (Optional)
+To run the Flask app:
+
+python app.py
+Author
+Purnapriya Tammana
+Data Science Intern
+LinkedIn:https://www.linkedin.com/in/purnapriya-tammana-27a0a7346/
+ GitHub:https://github.com/purnapriya4448/codec_projects/edit/main/README.md
+
+License
+This project is licensed under the MIT License.
+
+Acknowledgments
+Dataset: Kaggle – Telco Customer Churn
+
+Tools: Scikit-learn, Pandas, Matplotlib, Seaborn, Flask, XGBoost
+
+
